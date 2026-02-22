@@ -1,0 +1,16 @@
+# dependencies
+/node_modules
+/dist
+/generated
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# env files (can opt-in for committing if needed)
+.env.production
+.env
+.env.local
