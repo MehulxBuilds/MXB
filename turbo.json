@@ -1,0 +1,63 @@
+{
+    "ui": "tui",
+    "globalEnv": [
+        "DATABASE_URL",
+        "CLERK_SECRET_KEY",
+        "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY",
+        "NEXT_PUBLIC_CLERK_SIGN_IN_URL",
+        "NEXT_PUBLIC_CLERK_SIGN_UP_URL",
+        "NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL",
+        "NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL",
+        "NEXT_PUBLIC_SOCKET_URL",
+        "NEXT_PUBLIC_SITE_URL",
+        "NEXT_PUBLIC_LIVEKIT_URL",
+        "LIVEKIT_API_KEY",
+        "LIVEKIT_API_SECRET",
+        "UPLOADTHING_TOKEN",
+        "REDIS_URL",
+        "REDIS_CACHE_URL",
+        "KAFKA_BROKER",
+        "KAFKA_BOOTSTRAP_SERVERS",
+        "GOOGLE_GEMINI_API_KEY",
+        "NODE_ENV"
+    ],
+    "tasks": {
+        "build": {
+            "dependsOn": ["^build", "db:generate"],
+            "inputs": ["$TURBO_DEFAULT$", ".env*"],
+            "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+        },
+        "lint": {
+            "dependsOn": ["^lint"]
+        },
+        "dev": {
+            "cache": false,
+            "persistent": true
+        },
+        "db:generate": {
+            "cache": false,
+            "outputs": [
+                "node_modules/.prisma/**",
+                "packages/db/node_modules/.prisma/**"
+            ],
+            "env": ["DATABASE_URL"]
+        },
+        "db:push": {
+            "cache": false,
+            "env": ["DATABASE_URL"]
+        },
+        "db:migrate": {
+            "cache": false,
+            "env": ["DATABASE_URL"]
+        },
+        "db:migrate_dev": {
+            "cache": false,
+            "env": ["DATABASE_URL"]
+        },
+        "db:studio": {
+            "cache": false,
+            "persistent": true,
+            "env": ["DATABASE_URL"]
+        }
+    }
+}
