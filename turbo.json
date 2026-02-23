@@ -24,7 +24,8 @@
     "tasks": {
         "build": {
             "dependsOn": ["^build", "db:generate"],
-            "inputs": ["$TURBO_DEFAULT$", ".env*"]
+            "inputs": ["$TURBO_DEFAULT$", ".env*"],
+            "outputs": []
         },
         "lint": {
             "dependsOn": ["^lint"]
