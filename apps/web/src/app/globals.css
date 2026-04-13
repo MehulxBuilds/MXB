@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tailwindcss/theme" layer(theme);
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -116,6 +117,21 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.hidden-scrollbar {
+  overflow: auto;           /* or scroll */
+  scrollbar-width: none;    /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
+
+body::selection {
+  background: #000;
+  color: #fff;
 }
 
 @layer base {
