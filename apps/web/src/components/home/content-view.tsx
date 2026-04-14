@@ -3,6 +3,7 @@ import { SmoothScroll, SmoothScrollHandle } from '../smooth-scroll';
 import { motion } from 'motion/react';
 import Navbar from './navbar';
 import Introduction from './introduction';
+import ContactFooter from './contact';
 
 interface ContentViewProps {
     setActiveSection: (id: string) => void;
@@ -49,7 +50,7 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         onViewportEnter={() => setActiveSection("skills")}
                         viewport={{ amount: 0.6 }}
                         className='min-h-screen w-full flex justify-center items-center text-4xl font-bold text-gray-200 uppercase tracking-widest'>
-                        Skills & Tools
+                        Skills and Contact
                     </motion.section>
 
                     {/* Experience */}
@@ -75,8 +76,8 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         ref={(el: HTMLElement | null) => { sectionRefs.current["contacts"] = el }}
                         onViewportEnter={() => setActiveSection("contacts")}
                         viewport={{ amount: 0.6 }}
-                        className='min-h-screen w-full flex justify-center items-center text-4xl font-bold text-gray-200 uppercase tracking-widest'>
-                        Contacts
+                        className='min-h-auto w-full flex justify-center items-center'>
+                        <ContactFooter />
                     </motion.section>
 
                 </SmoothScroll>

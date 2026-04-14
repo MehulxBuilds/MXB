@@ -120,13 +120,17 @@
 }
 
 .hidden-scrollbar {
-  overflow: auto;           /* or scroll */
-  scrollbar-width: none;    /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  overflow: auto;
+  /* or scroll */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
 }
 
 .hidden-scrollbar::-webkit-scrollbar {
-  display: none;            /* Chrome, Safari, Opera */
+  display: none;
+  /* Chrome, Safari, Opera */
 }
 
 body::selection {
@@ -134,11 +138,54 @@ body::selection {
   color: #fff;
 }
 
+@font-face {
+  font-family: 'CandleSuit';
+  src: url('/fonts/CandleSuitDemoRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ApparelDisplay';
+  src: url('/fonts/ApparelDisplayItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SatoshiMedium';
+  src: url('/fonts/SatoshiMedium.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+.font-candle {
+  font-family: 'CandleSuit';
+}
+
+.font-apparel {
+  font-family: 'ApparelDisplay';
+}
+
+.font-satoshi {
+  font-family: 'SatoshiMedium';
+}
+
+.text-stroke-dark {
+  -webkit-text-stroke: 1px black;
+}
+
+.text-stroke-light {
+  -webkit-text-stroke: 1px #fff;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;

@@ -4,8 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ImageAnimation from './image-animation';
 import { SOCIALS } from './data';
-import { Hint } from "@repo/ui";
+import { Button, Hint } from "@repo/ui";
 import { EmailLogo, GithubLogo, InstagramLogo, LinkedInLogo, MediumLogo, PinterestLogo, TwitterLogo } from './data/svg-logo';
+import CalDotCom from '../cal-dot-com';
+import { Download, PhoneCall } from 'lucide-react';
 
 const Introduction = () => {
     return (
@@ -95,6 +97,20 @@ const Introduction = () => {
                         </Link>
                     </Hint>
                 </div>
+            </div>
+
+            <div className='w-full text-[13.5px] px-4 py-2 flex items-center gap-2'>
+                <CalDotCom className='font-medium tracking-tight bg-[#525252] border-2 border-[#8d8d8d] px-2 h-8.5 flex items-center justify-center gap-5 rounded-full hover:bg-[#424242]'>
+                    <div className='size-3 bg-[#6db3ff] animate-caret-blink rounded-full' />
+                    <p className='text-[13px]'>Book an Introductry Call</p>
+                    <PhoneCall className='text-white size-4' />
+                </CalDotCom>
+
+                <Button className='font-semibold tracking-tight bg-[#f3f3f3] border-2 border-[#7a7a7a] px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#ebebeb] text-[#525252]'>
+                    <Download className='size-4'/>
+                    <p className='text-[13px]'>Download CV</p>
+                </Button>
+
             </div>
         </div>
     )
