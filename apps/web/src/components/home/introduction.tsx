@@ -106,11 +106,10 @@ const Introduction = () => {
                     <PhoneCall className='text-white size-4' />
                 </CalDotCom>
 
-                <Button className='font-semibold tracking-tight bg-[#f3f3f3] border-2 border-[#7a7a7a] px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#ebebeb] text-[#525252]'>
+                <Button className='font-semibold tracking-tight bg-[#F9F9F9] border-2 border-[#7a7a7a] px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#F1F1F1] text-[#525252]'>
                     <Download className='size-4'/>
                     <p className='text-[13px]'>Download CV</p>
                 </Button>
-
             </div>
         </div>
     )
