@@ -56,7 +56,7 @@ const Introduction = () => {
                 <div className='w-full text-[13.5px] flex items-center gap-2'>
                     <ImageAnimation data={SOCIALS} classname='rounded-full flex items-center justify-center size-5' />
                     <p className="text-gray-500 tracking-[0.1px] flex items-center gap-1">
-                        <span>Btw I'm on bunch of <span className='font-medium'>Social Media's</span> as well</span> <span className='text-[14px]'>. . .</span>
+                        <span>{"Btw I'm on bunch of "}<span className='font-medium'>{"Social Media's"}</span> as well</span> <span className='text-[14px]'>. . .</span>
                     </p>
                 </div>
 
