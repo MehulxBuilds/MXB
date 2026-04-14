@@ -176,6 +176,10 @@ body::selection {
   -webkit-text-stroke: 1px black;
 }
 
+.section-heading-stroke-dark {
+  -webkit-text-stroke: 0.5px #292929;
+}
+
 .text-stroke-light {
   -webkit-text-stroke: 1px #fff;
 }

@@ -4,6 +4,9 @@ import { motion } from 'motion/react';
 import Navbar from './navbar';
 import Introduction from './introduction';
 import ContactFooter from './contact';
+import SkillsAndTools from './skills-and-tools';
+import Experience from './experience';
+import Projects from './projects';
 
 interface ContentViewProps {
     setActiveSection: (id: string) => void;
@@ -44,13 +47,14 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         <Introduction />
                     </motion.section>
 
+
                     {/* Skills & Tools */}
                     <motion.section
                         ref={(el: HTMLElement | null) => { sectionRefs.current["skills"] = el }}
                         onViewportEnter={() => setActiveSection("skills")}
                         viewport={{ amount: 0.6 }}
-                        className='min-h-screen w-full flex justify-center items-center text-4xl font-bold text-gray-200 uppercase tracking-widest'>
-                        Skills and Contact
+                        className='min-h-auto w-full flex justify-center items-center'>
+                        <SkillsAndTools />
                     </motion.section>
 
                     {/* Experience */}
@@ -58,8 +62,8 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         ref={(el: HTMLElement | null) => { sectionRefs.current["experience"] = el }}
                         onViewportEnter={() => setActiveSection("experience")}
                         viewport={{ amount: 0.6 }}
-                        className='min-h-screen w-full flex justify-center items-center text-4xl font-bold text-gray-200 uppercase tracking-widest'>
-                        Experience
+                        className='min-h-auto w-full flex justify-center items-center'>
+                        <Experience />
                     </motion.section>
 
                     {/* Projects */}
@@ -67,8 +71,8 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         ref={(el: HTMLElement | null) => { sectionRefs.current["projects"] = el }}
                         onViewportEnter={() => setActiveSection("projects")}
                         viewport={{ amount: 0.6 }}
-                        className='min-h-screen w-full flex justify-center items-center text-4xl font-bold text-gray-200 uppercase tracking-widest'>
-                        Projects
+                        className='min-h-auto w-full flex justify-center items-center'>
+                        <Projects />
                     </motion.section>
 
                     {/* Contacts */}

@@ -6,6 +6,13 @@ export default function ContactFooter() {
     return (
         <section className="w-[640px] mx-auto py-4 text-center text-[#484848] relative">
 
+            <div className="w-full rounded-xl flex items-center justify-center gap-4 bg-white py-15">
+                <p className='font-apparel tracking-[0.3px] italic text-[#c8c8c8] text-[26px]'>
+                    Get In Touch.
+                </p>
+            </div>
+
+
             <div className="text-[36px] text-[#5A5A5A] flex flex-col items-center leading-9">
                 {/* Heading */}
                 <h1 className="font-sans font-medium tracking-tight">
