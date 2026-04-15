@@ -1,3 +1,4 @@
+import { PROJECTS } from "./data";
 import ProjectCard from "./project-card";
 
 const Projects = () => {
@@ -8,26 +9,17 @@ const Projects = () => {
             </div>
 
             <div className="w-full flex flex-col items-center justify-center gap-10">
-                <ProjectCard
-                    projectTitle="Elowen"
-                    projectDescription="Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat."
-                    projectGithub="https://github.com/MehulxBuilds/Elowen"
-                />
-                
-                <ProjectCard
-                    projectTitle="Elowen"
-                    projectDescription="Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat."
-                    projectGithub="https://github.com/MehulxBuilds/Elowen"
-                />
-                
-                <ProjectCard
-                    projectTitle="Elowen"
-                    projectDescription="Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat."
-                    projectGithub="https://github.com/MehulxBuilds/Elowen"
-                />
+                {PROJECTS.map((item, idx) => (
+                    <ProjectCard
+                        key={idx}
+                        projectTitle={item.projectTitle}
+                        projectDescription={item.projectDescription}
+                        projectGithub={item.projectGithub}
+                        coverImage={item.coverImage}
+                        projectLiveUrl={item.projectLiveUrl}
+                    />
+                ))}
             </div>
-
-
         </div>
     )
 };

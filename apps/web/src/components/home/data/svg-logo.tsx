@@ -90,3 +90,6 @@ export const LinkedInLogo = () => {
         </svg>
     )
 };
+
+// Skills & Tools
+

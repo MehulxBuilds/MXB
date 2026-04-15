@@ -22,6 +22,6 @@ const RootPage = () => {
             />
         </div>
     )
-}
+};
 
 export default RootPage;

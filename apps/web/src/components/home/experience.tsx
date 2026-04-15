@@ -1,3 +1,4 @@
+import { EXPERIENCE } from './data';
 import ExperienceCard from './experience-card';
 
 const Experience = () => {
@@ -7,44 +8,28 @@ const Experience = () => {
                 <p className='font-apparel tracking-[0.3px] italic text-[#292929] section-heading-stroke-dark text-[26px]'>Experience.</p>
             </div>
 
-            <ExperienceCard
-                companyName='Tejas'
-                country='India'
-                startDate='Feb 2026'
-                endDate='Now'
-                role='Full Stack Developer'
-                workRole='Intern'
-                workType='Hybrid'
-                companyImage='tejas-logo.png'
-                points1='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-                points2='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-            />
-            <div className="my-2 border-t border-dashed border-neutral-300 w-full" />
-            <ExperienceCard
-                companyName='Tejas'
-                country='India'
-                startDate='Feb 2026'
-                endDate='Now'
-                role='Full Stack Developer'
-                workRole='Intern'
-                workType='Hybrid'
-                companyImage='tejas-logo.png'
-                points1='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-                points2='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-            />
-            <div className="my-2 border-t border-dashed border-neutral-300 w-full" />
-            <ExperienceCard
-                companyName='Tejas'
-                country='India'
-                startDate='Feb 2026'
-                endDate='Now'
-                role='Full Stack Developer'
-                workRole='Intern'
-                workType='Hybrid'
-                companyImage='tejas-logo.png'
-                points1='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-                points2='Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
-            />
+            {EXPERIENCE.map((exp, idx) => (
+                <>
+                    <ExperienceCard
+                        key={idx}
+                        companyName={exp.companyName}
+                        country={exp.country}
+                        startDate={exp.startDate}
+                        endDate={exp.endDate}
+                        role={exp.role}
+                        workRole={exp.workRole}
+                        workType={exp.workType}
+                        companyImage={exp.companyImage}
+                        points1={exp.points1}
+                        points2={exp.points2}
+                        points3={exp.points3}
+                        points4={exp.points4}
+                    />
+                    {idx < (EXPERIENCE.length - 1) && (
+                        <div className="my-2 border-t border-dashed border-neutral-300 w-full" />
+                    )}
+                </>
+            ))}
         </div>
     )
 };
