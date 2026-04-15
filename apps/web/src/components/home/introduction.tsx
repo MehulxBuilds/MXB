@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ImageAnimation from './image-animation';
 import { SOCIALS } from './data';
-import { Button, Hint } from "@repo/ui";
+import { Hint } from "@repo/ui";
 import { EmailLogo, GithubLogo, InstagramLogo, LinkedInLogo, MediumLogo, PinterestLogo, TwitterLogo } from './data/svg-logo';
 import CalDotCom from '../cal-dot-com';
 import { Download, PhoneCall } from 'lucide-react';
@@ -100,16 +100,16 @@ const Introduction = () => {
             </div>
 
             <div className='w-full text-[13.5px] px-4 py-2 flex items-center gap-2'>
-                <CalDotCom className='font-medium tracking-tight bg-[#525252] border-2 border-[#8d8d8d] px-2 h-8.5 flex items-center justify-center gap-5 rounded-full hover:bg-[#424242]'>
-                    <div className='size-3 bg-[#6db3ff] animate-caret-blink rounded-full' />
+                <CalDotCom className='font-medium tracking-tight bg-[#3b3b3b] border-2 border-[#c3c3c3] px-2 h-8.5 flex items-center justify-center gap-5 rounded-full hover:bg-[#424242] drop-shadow-md drop-shadow-neutral-400'>
+                    <div className='size-3 bg-[#ff0066] animate-caret-blink rounded-full' />
                     <p className='text-[13px]'>Book an Introductry Call</p>
                     <PhoneCall className='text-white size-4' />
                 </CalDotCom>
 
-                <Button className='font-semibold tracking-tight bg-[#F9F9F9] border-2 border-[#7a7a7a] px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#F1F1F1] text-[#525252]'>
+                <Link href={'https://drive.google.com/file/d/1VOUbQmZnxSVYfVFHHQxdtROWwrVzR3L-/view?usp=sharing'} target='_blank' className='font-semibold tracking-tight bg-[#F9F9F9] border-2 border-[#7a7a7a] px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#F1F1F1] text-[#525252] drop-shadow-md drop-shadow-neutral-400'>
                     <Download className='size-4'/>
                     <p className='text-[13px]'>Download CV</p>
-                </Button>
+                </Link>
             </div>
         </div>
     )
