@@ -22,7 +22,7 @@ const ExperienceCard = (
         startDate: string,
         endDate: string,
         role: string,
-        companyImage: string,
+        companyImage?: string,
         points1: string,
         points2?: string,
         points3?: string,

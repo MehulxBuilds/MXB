@@ -36,7 +36,7 @@ export const EXPERIENCE: ExperienceType[] = [
     {
         companyName: 'Tejas',
         country: 'India',
-        startDate: 'Feb 2026',
+        startDate: 'Mar 2026',
         endDate: 'Now',
         role: 'Full Stack Developer',
         workRole: 'Intern',
@@ -46,26 +46,25 @@ export const EXPERIENCE: ExperienceType[] = [
         points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
     },
     {
-        companyName: 'Tejas',
+        companyName: 'Freelance',
         country: 'India',
-        startDate: 'Feb 2026',
-        endDate: 'Now',
+        startDate: 'Nov 2025',
+        endDate: 'Jan 2026',
         role: 'Full Stack Developer',
-        workRole: 'Intern',
-        workType: 'Hybrid',
-        companyImage: 'tejas-logo.png',
+        workRole: 'Freelancer',
+        workType: 'Remote',
         points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
         points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
     },
     {
-        companyName: 'Tejas',
+        companyName: 'CreatiQ.Tech',
         country: 'India',
-        startDate: 'Feb 2026',
-        endDate: 'Now',
+        startDate: 'July 2025',
+        endDate: 'Nov 2025',
         role: 'Full Stack Developer',
         workRole: 'Intern',
-        workType: 'Hybrid',
-        companyImage: 'tejas-logo.png',
+        workType: 'Remote',
+        companyImage: 'creatiq-tech-logo.png',
         points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
         points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
     },
@@ -73,17 +72,23 @@ export const EXPERIENCE: ExperienceType[] = [
 export const PROJECTS: ProjectType[] = [
     {
         projectTitle: "Elowen",
-        projectDescription: "Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat.",
+        projectDescription: "A Telegram-native AI assistant that understands both voice and text, delivering fast, human-like responses directly inside chats with multilingual support and seamless interaction.",
         projectGithub: "https://github.com/MehulxBuilds/Elowen",
     },
     {
-        projectTitle: "Elowen",
-        projectDescription: "Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat.",
-        projectGithub: "https://github.com/MehulxBuilds/Elowen",
+        projectTitle: "Raven Claw",
+        projectDescription: "An automation engine for content pipelines that handles scheduled jobs, background workers, and event-driven processing to generate and publish content across platforms at scale.",
+        projectGithub: "https://github.com/MehulxBuilds/Raven-Claw",
     },
     {
-        projectTitle: "Elowen",
-        projectDescription: "Elowen is a chill AI assistant inside Telegram—no extra apps, just fast, human-like replies right in your chat.",
-        projectGithub: "https://github.com/MehulxBuilds/Elowen",
+        projectTitle: "Voxara",
+        projectDescription: "A voice-focused AI platform designed for real-time speech interaction, enabling seamless voice input, processing, and intelligent responses for conversational experiences.",
+        projectGithub: "https://github.com/MehulxBuilds/voxara",
     },
+    {
+        projectTitle: "Lavender",
+        projectDescription: "A lightweight AI-powered tool focused on enhancing productivity and user workflows through clean design, automation, and intelligent assistance.",
+        projectGithub: "https://github.com/MehulxBuilds/Lavender",
+    }
 ];
+
