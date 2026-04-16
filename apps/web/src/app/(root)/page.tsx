@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ContentView from "@/components/home/content-view";
-import SidebarView from "@/components/home/sidebar-view";
+import SidebarView from "@/components/home/sidebar-view";   
 
 const RootPage = () => {
     const [activeSection, setActiveSection] = useState("introduction");

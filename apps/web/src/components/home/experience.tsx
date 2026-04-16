@@ -9,7 +9,7 @@ const Experience = () => {
             </div>
 
             {EXPERIENCE.map((exp, idx) => (
-                <>
+                <div key={idx}>
                     <ExperienceCard
                         key={idx}
                         companyName={exp.companyName}
@@ -28,7 +28,7 @@ const Experience = () => {
                     {idx < (EXPERIENCE.length - 1) && (
                         <div className="my-2 border-t border-dashed border-neutral-300 w-full" />
                     )}
-                </>
+                </div>
             ))}
         </div>
     )
