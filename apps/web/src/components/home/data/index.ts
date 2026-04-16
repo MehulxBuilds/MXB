@@ -1,4 +1,4 @@
-import { AnimateSectionTerms, ExperienceType, HomeDataItemType, ProjectType } from "@/types";
+import { AnimateSectionTerms, ExperienceType, HomeDataItemType, ProjectType, SkillsType } from "@/types";
 
 export const homeDataItem: HomeDataItemType[] = [
     {
@@ -34,16 +34,16 @@ export const SOCIALS: AnimateSectionTerms = ["github.svg", "instagram.svg", "med
 
 export const EXPERIENCE: ExperienceType[] = [
     {
-        companyName: 'Tejas',
+        companyName: 'Babyyy',
         country: 'India',
         startDate: 'Mar 2026',
         endDate: 'Now',
         role: 'Full Stack Developer',
         workRole: 'Intern',
         workType: 'Hybrid',
-        companyImage: 'tejas-logo.png',
         points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
+        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        currentWorking: true
     },
     {
         companyName: 'Freelance',
@@ -54,7 +54,8 @@ export const EXPERIENCE: ExperienceType[] = [
         workRole: 'Freelancer',
         workType: 'Remote',
         points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
+        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        currentWorking: false,
     },
     {
         companyName: 'CreatiQ.Tech',
@@ -66,7 +67,8 @@ export const EXPERIENCE: ExperienceType[] = [
         workType: 'Remote',
         companyImage: 'creatiq-tech-logo.png',
         points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.'
+        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        currentWorking: false,
     },
 ];
 export const PROJECTS: ProjectType[] = [
@@ -91,4 +93,41 @@ export const PROJECTS: ProjectType[] = [
         projectGithub: "https://github.com/MehulxBuilds/Lavender",
     }
 ];
+export const SKILLS: SkillsType[] = [
+    // LANGUAGES
+    { text: "C", image: "/skills/c.svg", skilltype: "LANGUAGE" },
+    { text: "C++", image: "/skills/cpp.svg", skilltype: "LANGUAGE" },
+    { text: "JavaScript", image: "/skills/javascript.svg", skilltype: "LANGUAGE" },
+    { text: "TypeScript", image: "/skills/typescript.svg", skilltype: "LANGUAGE" },
+    { text: "Python", image: "/skills/python.svg", skilltype: "LANGUAGE" },
+    { text: "Rust", image: "/skills/rust.svg", skilltype: "LANGUAGE" },
 
+    // FRAMEWORKS & LIBRARIES
+    { text: "React", image: "/skills/react.png", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "Node.js", image: "/skills/nodejs.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "Express.js", image: "/skills/express-js.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "Tailwind CSS", image: "/skills/tailwind-css.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
+
+    // DATABASE
+    { text: "MongoDB", image: "/skills/mongodb.png", skilltype: "DATABASE" },
+    { text: "PostgreSQL", image: "/skills/postgresql.png", skilltype: "DATABASE" },
+    { text: "Redis", image: "/skills/redis.png", skilltype: "DATABASE" },
+
+    // CLOUD INFRA
+    { text: "Docker", image: "/skills/docker.png", skilltype: "CLOUD INFRA" },
+    { text: "Kafka", image: "/skills/kafka.png", skilltype: "CLOUD INFRA" },
+    { text: "Supabase", image: "/skills/supabase.svg", skilltype: "CLOUD INFRA" },
+
+    // TOOLS
+    { text: "Git", image: "/skills/git.svg", skilltype: "TOOLS" },
+    { text: "GitHub", image: "/skills/github.png", skilltype: "TOOLS" },
+    { text: "Figma", image: "/skills/figma.svg", skilltype: "TOOLS" },
+    { text: "Framer", image: "/skills/framer.png", skilltype: "TOOLS" },
+
+    // WEB BASICS
+    { text: "HTML", image: "/skills/html.svg", skilltype: "LANGUAGE" },
+    { text: "CSS", image: "/skills/css.svg", skilltype: "LANGUAGE" },
+
+    // BLOCKCHAIN
+    { text: "Solidity", image: "/skills/solidity.svg", skilltype: "LANGUAGE" },
+];

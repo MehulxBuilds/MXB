@@ -24,6 +24,7 @@ const Experience = () => {
                         points2={exp.points2}
                         points3={exp.points3}
                         points4={exp.points4}
+                        currentWorking={exp.currentWorking}
                     />
                     {idx < (EXPERIENCE.length - 1) && (
                         <div className="my-2 border-t border-dashed border-neutral-300 w-full" />

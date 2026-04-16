@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mehul Prajapati — @MehulxBuilds",
+  title: "Mehul Prajapati",
   description: "A Portfolio of Mehul Prajapati a well know Developer/Designer or professional Product Builder",
 };
 
