@@ -13,7 +13,8 @@ const ExperienceCard = (
         points1,
         points2,
         points3,
-        points4
+        points4,
+        currentWorking,
     }: {
         companyName: string,
         workRole: string,
@@ -26,7 +27,8 @@ const ExperienceCard = (
         points1: string,
         points2?: string,
         points3?: string,
-        points4?: string
+        points4?: string,
+        currentWorking: boolean,
     }) => {
     return (
         <div className="w-full max-w-2xl rounded-2xl bg-white p-5 text-neutral-900 font-sans">
@@ -35,11 +37,12 @@ const ExperienceCard = (
             <div className="flex items-start justify-between">
 
                 {/* Left */}
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3 relative">
 
                     {/* Icon */}
 
-                    <div className="shrink-0 size-10 rounded-xl bg-neutral-100 flex items-center justify-center border border-neutral-200">
+
+                    <div className={`shrink-0 size-10 rounded-xl bg-neutral-100 flex items-center justify-center border border-neutral-200 ${currentWorking ? "blur-sm select-none" : ""}`}>
                         <Image
                             src={`/images/${companyImage}`}
                             height={20}
@@ -53,12 +56,18 @@ const ExperienceCard = (
                     {/* Title + Role */}
                     <div>
                         <div className="flex items-center gap-2">
-                            <p className="font-medium text-[15px] tracking-tight">
+                            <p className={`font-medium text-[15px] tracking-tight ${currentWorking ? "blur-sm select-none" : ""}`}>
                                 {companyName}
                             </p>
                             <span className="text-[11px] px-2 py-[2px] rounded-md bg-neutral-100 text-neutral-600 border border-neutral-200">
-                                {workRole}
+                                <span>{workRole}</span>
                             </span>
+                            {currentWorking && (
+                                <span className="relative flex items-center justify-center size-3">
+                                    <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
+                                    <span className="relative inline-flex size-2 rounded-full bg-green-500" />
+                                </span>
+                            )}
                         </div>
 
                         <p className="text-[13px] text-neutral-500 mt-[2px]">
