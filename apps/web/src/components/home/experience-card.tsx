@@ -63,9 +63,9 @@ const ExperienceCard = (
                                 <span>{workRole}</span>
                             </span>
                             {currentWorking && (
-                                <span className="relative flex items-center justify-center size-3">
+                                <span className="relative flex items-center justify-center size-2.5">
                                     <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
-                                    <span className="relative inline-flex size-2 rounded-full bg-green-500" />
+                                    <span className="relative inline-flex size-[6.5px] rounded-full bg-green-500" />
                                 </span>
                             )}
                         </div>
