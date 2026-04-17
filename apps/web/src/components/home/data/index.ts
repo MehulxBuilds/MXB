@@ -1,4 +1,4 @@
-import { AnimateSectionTerms, ExperienceType, HomeDataItemType, ProjectType, SkillsType } from "@/types";
+import { AnimateSectionTerms, DesignSkillsType, ExperienceType, HomeDataItemType, ProjectType, SkillsType } from "@/types";
 
 export const homeDataItem: HomeDataItemType[] = [
     {
@@ -76,21 +76,25 @@ export const PROJECTS: ProjectType[] = [
         projectTitle: "Elowen",
         projectDescription: "A Telegram-native AI assistant that understands both voice and text, delivering fast, human-like responses directly inside chats with multilingual support and seamless interaction.",
         projectGithub: "https://github.com/MehulxBuilds/Elowen",
+        coverImage: "elowen.png"
     },
     {
         projectTitle: "Raven Claw",
         projectDescription: "An automation engine for content pipelines that handles scheduled jobs, background workers, and event-driven processing to generate and publish content across platforms at scale.",
         projectGithub: "https://github.com/MehulxBuilds/Raven-Claw",
+        coverImage: "raven-claw.png"
     },
     {
         projectTitle: "Voxara",
         projectDescription: "A voice-focused AI platform designed for real-time speech interaction, enabling seamless voice input, processing, and intelligent responses for conversational experiences.",
         projectGithub: "https://github.com/MehulxBuilds/voxara",
+        coverImage: "voxara.png"
     },
     {
         projectTitle: "Lavender",
         projectDescription: "A lightweight AI-powered tool focused on enhancing productivity and user workflows through clean design, automation, and intelligent assistance.",
         projectGithub: "https://github.com/MehulxBuilds/Lavender",
+        coverImage: "lavender.png"
     }
 ];
 export const SKILLS: SkillsType[] = [
@@ -107,11 +111,17 @@ export const SKILLS: SkillsType[] = [
     { text: "Node.js", image: "/skills/nodejs.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
     { text: "Express.js", image: "/skills/express-js.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
     { text: "Tailwind CSS", image: "/skills/tailwind-css.svg", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "TanStack Query", image: "/skills/tanstack-query.png", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "ShadCN UI", image: "/skills/shadcn-ui.png", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "Elysia.js", image: "/skills/elysiajs.webp", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "Next.js", image: "/skills/nextjs.png", skilltype: "FRAMEWORKS & LIBRARIES" },
 
     // DATABASE
     { text: "MongoDB", image: "/skills/mongodb.png", skilltype: "DATABASE" },
     { text: "PostgreSQL", image: "/skills/postgresql.png", skilltype: "DATABASE" },
+    { text: "MySQL", image: "/skills/mysql.png", skilltype: "DATABASE" },
     { text: "Redis", image: "/skills/redis.png", skilltype: "DATABASE" },
+    { text: "PineconeDB", image: "/skills/pinecone-db.png", skilltype: "DATABASE" },
 
     // CLOUD INFRA
     { text: "Docker", image: "/skills/docker.png", skilltype: "CLOUD INFRA" },
@@ -130,4 +140,35 @@ export const SKILLS: SkillsType[] = [
 
     // BLOCKCHAIN
     { text: "Solidity", image: "/skills/solidity.svg", skilltype: "LANGUAGE" },
+];
+
+export const DESIGNSKILLS: DesignSkillsType[] = [
+    {
+        text: "Cascadia Landing",
+        image: "/design/cascadia-landing.png",
+    },
+    {
+        text: "Insights Footer",
+        image: "/design/insights-footer.png",
+    },
+    {
+        text: "Kanes Footer",
+        image: "/design/kanes-footer.png",
+    },
+    {
+        text: "Kanes Landing",
+        image: "/design/kanes-landing.png",
+    },
+    {
+        text: "Portfolio Footer",
+        image: "/design/portfolio-footer.png",
+    },
+    {
+        text: "Reliquary Landing",
+        image: "/design/reliquary-landing.png",
+    },
+    {
+        text: "Sweenity Landing",
+        image: "/design/sweenity-landing.png",
+    },
 ];
