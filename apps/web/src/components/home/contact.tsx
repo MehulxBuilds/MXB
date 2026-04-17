@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CalDotCom from "../cal-dot-com";
 
 export default function ContactFooter() {
@@ -82,10 +83,16 @@ export default function ContactFooter() {
 
                     <div>
                         <p className="font-medium text-neutral-800 mb-2 text-[15px]">Socials</p>
-                        <ul className="space-y-1 text-neutral-500 text-[14px]">
-                            <li>Twitter</li>
-                            <li>LinkedIn</li>
-                            <li>Instagram</li>
+                        <ul className="space-y-1 text-neutral-500 text-[14px] flex flex-col">
+                            <Link href="https://x.com/MehulxBuilds" target="_blank">
+                                Twitter
+                            </Link>
+                            <Link href="https://www.linkedin.com/in/mehul-prajapati-816b28315/" target="_blank">
+                                LinkedIn
+                            </Link>
+                            <Link href="https://www.instagram.com/mehulxbuilds/" target="_blank">
+                                Instagram
+                            </Link>
                         </ul>
                     </div>
 

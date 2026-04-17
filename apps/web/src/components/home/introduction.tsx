@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ImageAnimation from './image-animation';
 import { SOCIALS } from './data';
-import { Hint } from "@repo/ui";
+import { Button, Hint } from "@repo/ui";
 import { EmailLogo, GithubLogo, InstagramLogo, LinkedInLogo, MediumLogo, PinterestLogo, TwitterLogo } from './data/svg-logo';
 import CalDotCom from '../cal-dot-com';
 import { Download, PhoneCall } from 'lucide-react';
@@ -14,7 +14,7 @@ const Introduction = () => {
         <div className='min-h-full w-160 flex flex-col justify-start items-center'>
             <div className="min-h-28 w-full rounded-xl flex items-center gap-4 px-4 py-2 bg-white">
                 {/* Avatar */}
-                <div className="shrink-0">
+                <div className="shrink-0 relative">
                     <Image
                         src="/images/mehulxbuilds.png"
                         alt="Mehul Prajapati"
@@ -23,12 +23,19 @@ const Introduction = () => {
                         className="w-26 h-26 rounded-full object-cover"
                         unoptimized
                     />
+
+                    <Button className='font-medium tracking-tight bg-white px-1 h-4 flex items-center justify-center gap-2.5 rounded-full hover:bg-neutral-50 hover:border-neutral-300 text-neutral-800 transition-all absolute bottom-1 right-1.5'>
+                        <span className="relative flex items-center justify-center size-3">
+                            <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
+                            <span className="relative inline-flex size-1.75 rounded-full bg-green-500" />
+                        </span>
+                    </Button>
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-col">
-                    <h1 className="text-[25px] font-semibold tracking-[-0.5px] text-gray-900">
-                        Mehul Prajapati.
+                    <h1 className="text-[25px] font-semibold tracking-[-0.5px] text-gray-900 flex items-center gap-2">
+                        <span>Mehul Prajapati.</span>
                     </h1>
 
                     <p className="text-[15px] text-gray-400 tracking-[-0.1px]">

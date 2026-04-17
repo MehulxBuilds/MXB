@@ -70,7 +70,7 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                     <motion.section
                         ref={(el: HTMLElement | null) => { sectionRefs.current["projects"] = el }}
                         onViewportEnter={() => setActiveSection("projects")}
-                        viewport={{ amount: 0.6 }}
+                        viewport={{ amount: 0.2 }}
                         className='min-h-auto w-full flex justify-center items-center'>
                         <Projects />
                     </motion.section>

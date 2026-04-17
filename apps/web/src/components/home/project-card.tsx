@@ -34,7 +34,8 @@ const ProjectCard = ({
                 />
 
                 {/* gradient overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-white" />
+                {/* <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-transparent via-white/40 to-white" /> */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-white/40" />
             </div>
 
             {/* Content */}

@@ -37,3 +37,10 @@ export interface SkillsType {
     skilltype: SkillsTypeChoice;
     image: string;
 };
+
+export type ProjectTabsType = "dev" | "design";
+
+export interface DesignSkillsType {
+    text: string;
+    image: string;
+};
