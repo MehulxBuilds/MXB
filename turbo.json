@@ -23,12 +23,24 @@
     ],
     "tasks": {
         "build": {
-            "dependsOn": ["^build", "db:generate"],
-            "inputs": ["$TURBO_DEFAULT$", ".env*"],
-            "outputs": []
+            "dependsOn": [
+                "^build",
+                "db:generate"
+            ],
+            "inputs": [
+                "$TURBO_DEFAULT$",
+                ".env*"
+            ],
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "dist/**"
+            ]
         },
         "lint": {
-            "dependsOn": ["^lint"]
+            "dependsOn": [
+                "^lint"
+            ]
         },
         "dev": {
             "cache": false,
@@ -40,24 +52,34 @@
                 "node_modules/.prisma/**",
                 "packages/db/node_modules/.prisma/**"
             ],
-            "env": ["DATABASE_URL"]
+            "env": [
+                "DATABASE_URL"
+            ]
         },
         "db:push": {
             "cache": false,
-            "env": ["DATABASE_URL"]
+            "env": [
+                "DATABASE_URL"
+            ]
         },
         "db:migrate": {
             "cache": false,
-            "env": ["DATABASE_URL"]
+            "env": [
+                "DATABASE_URL"
+            ]
         },
         "db:migrate_dev": {
             "cache": false,
-            "env": ["DATABASE_URL"]
+            "env": [
+                "DATABASE_URL"
+            ]
         },
         "db:studio": {
             "cache": false,
             "persistent": true,
-            "env": ["DATABASE_URL"]
+            "env": [
+                "DATABASE_URL"
+            ]
         }
     }
 }
