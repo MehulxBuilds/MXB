@@ -1,0 +1,14 @@
+{
+    "extends": "../../packages/typescript-config/base.json",
+    "compilerOptions": {
+        "target": "es2017",
+        "lib": ["esnext"],
+        "allowJs": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "include": ["src"]
+}
