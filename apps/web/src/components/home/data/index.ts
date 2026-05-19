@@ -41,8 +41,8 @@ export const EXPERIENCE: ExperienceType[] = [
         role: 'Full Stack Developer',
         workRole: 'Intern',
         workType: 'Hybrid',
-        points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        points1: 'Built heavy application (Microservices) with the Tech Team using PERN Stack, also did CRM Intergration',
+        points2: 'Designed backend systems, APIs, Mobile Applications, manage storage workflows using AWS S3, PostgreSQL.',
         currentWorking: true
     },
     {
@@ -53,8 +53,8 @@ export const EXPERIENCE: ExperienceType[] = [
         role: 'Full Stack Developer',
         workRole: 'Freelancer',
         workType: 'Remote',
-        points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        points1: 'Developed responsive web applications using Next.js, TypeScript, and modern UI/UX principles.',
+        points2: 'Deliver SEO-optimized solutions, like scalable backend system, APIs, and managed storage, vector workflows using AWS S3',
         currentWorking: false,
     },
     {
@@ -66,8 +66,8 @@ export const EXPERIENCE: ExperienceType[] = [
         workRole: 'Intern',
         workType: 'Remote',
         companyImage: 'creatiq-tech-logo.png',
-        points1: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
-        points2: 'Creating a comprehensive collection of 100+ background block designs. Building reusable UI components with stunning visual backgrounds.',
+        points1: 'Delivered end-to-end client projects using the MERN stack, NextJs also used Figma for design.',
+        points2: 'Built responsive, SEO-optimized applications focused on performance, engagement, and conversions.',
         currentWorking: false,
     },
 ];
@@ -115,6 +115,7 @@ export const SKILLS: SkillsType[] = [
     { text: "ShadCN UI", image: "/skills/shadcn-ui.png", skilltype: "FRAMEWORKS & LIBRARIES" },
     { text: "Elysia.js", image: "/skills/elysiajs.webp", skilltype: "FRAMEWORKS & LIBRARIES" },
     { text: "Next.js", image: "/skills/nextjs.png", skilltype: "FRAMEWORKS & LIBRARIES" },
+    { text: "React Native", image: "/skills/react-native.png", skilltype: "FRAMEWORKS & LIBRARIES" },
 
     // DATABASE
     { text: "MongoDB", image: "/skills/mongodb.png", skilltype: "DATABASE" },
@@ -133,6 +134,9 @@ export const SKILLS: SkillsType[] = [
     { text: "GitHub", image: "/skills/github.png", skilltype: "TOOLS" },
     { text: "Figma", image: "/skills/figma.svg", skilltype: "TOOLS" },
     { text: "Framer", image: "/skills/framer.png", skilltype: "TOOLS" },
+    { text: "Claude", image: "/skills/claude.png", skilltype: "TOOLS" },
+    { text: "Codex", image: "/skills/codex.png", skilltype: "TOOLS" },
+    { text: "Cursor", image: "/skills/cursor.png", skilltype: "TOOLS" },
 
     // WEB BASICS
     { text: "HTML", image: "/skills/html.svg", skilltype: "LANGUAGE" },
