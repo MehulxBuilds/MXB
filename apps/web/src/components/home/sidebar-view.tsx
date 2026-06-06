@@ -1,34 +1,34 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { homeDataItem } from './data';
-import { SmoothScroll, SmoothScrollHandle } from '../smooth-scroll';
 import { motion } from 'motion/react';
 import { MoveUpRight } from 'lucide-react';
 
 interface SidebarViewProps {
     activeSection: string;
     onSectionClick: (id: string) => void;
+    mobile?: boolean;
 }
 
-const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
-    const scrollRef = useRef<SmoothScrollHandle>(null);
+const SidebarView = ({ activeSection, onSectionClick, mobile }: SidebarViewProps) => {
+    const scrollRef = useRef<HTMLDivElement>(null);
     const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     useEffect(() => {
         if (scrollRef.current && itemRefs.current[activeSection]) {
-            const container = scrollRef.current.container;
+            const container = scrollRef.current;
             const target = itemRefs.current[activeSection];
 
             if (container && target) {
                 const targetTop = target.offsetTop - (container.offsetHeight / 2) + (target.offsetHeight / 2);
-                scrollRef.current.scrollTo(targetTop);
+                container.scrollTo({ top: targetTop, behavior: 'smooth' });
             }
         }
     }, [activeSection]);
 
     return (
-        <aside className="relative w-[320px] flex flex-col bg-[#E6E6E6] rounded-4xl p-4 border border-gray-200 h-full overflow-hidden">
-            <SmoothScroll ref={scrollRef} className="flex-1">
+        <aside className={`relative flex flex-col bg-[#E6E6E6] p-4 border border-gray-200 overflow-hidden ${mobile ? 'w-full h-full rounded-r-4xl' : 'w-[320px] rounded-4xl h-full'}`}>
+            <div ref={scrollRef} className="flex-1 w-full h-full overflow-y-auto scroll-smooth hidden-scrollbar">
                 <div className="flex flex-col gap-4">
                     {
                         homeDataItem.map((item) => (
@@ -52,7 +52,8 @@ const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
                                     src={`/images/${item.imageUrl}`}
                                     alt={item.title}
                                     fill
-                                    className={`object-cover transition-all duration-700 group-hover:scale-110 ${activeSection === item.id ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'
+                                    sizes="320px"
+                                    className={`object-cover transition-[filter] duration-300 ${activeSection === item.id ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'
                                         }`}
                                 />
                                 <div className="absolute bottom-0 w-full h-30 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(0,0,0,0.53)_70%)]" />
@@ -62,17 +63,13 @@ const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
                                     <MoveUpRight className="size-4.25 opacity-0 translate-y-1 hidden group-hover:block  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
                                 </div>
                                 {activeSection === item.id && (
-                                    <motion.div
-                                        layoutId="active-indicator"
-                                        className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full shadow-lg"
-                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                    />
+                                    <div className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full shadow-lg" />
                                 )}
                             </motion.div>
                         ))
                     }
                 </div>
-            </SmoothScroll>
+            </div>
 
         </aside>
     )

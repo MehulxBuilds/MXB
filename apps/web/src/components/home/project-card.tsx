@@ -21,10 +21,10 @@ const ProjectCard = ({
     return (
         <div
             onClick={() => window.open(redirectUrl, "_blank")}
-            className="group w-full max-w-3xl cursor-pointer rounded-2xl border-2 border-neutral-200 bg-white overflow-hidden flex hover:border-neutral-400 transition-all duration-200"
+            className="group w-full max-w-3xl cursor-pointer rounded-2xl border-2 border-neutral-200 bg-neutral-100 sm:bg-white overflow-hidden flex flex-col sm:flex-row hover:border-neutral-400 transition-all duration-200 shadow-lg"
         >
             {/* Image */}
-            <div className="relative w-[240px] shrink-0 overflow-hidden">
+            <div className="relative w-full h-40 sm:w-[240px] sm:h-auto shrink-0 overflow-hidden">
                 <Image
                     src={`/images/${coverImage}`}
                     alt={projectTitle}
@@ -43,7 +43,7 @@ const ProjectCard = ({
                 <div className="flex flex-col gap-2">
                     {/* Top row */}
                     <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-semibold text-neutral-700 tracking-tight">
+                        <h3 className="text-base sm:text-xl font-semibold text-neutral-700 tracking-tight">
                             {projectTitle}
                         </h3>
 
@@ -60,7 +60,7 @@ const ProjectCard = ({
                     </div>
 
                     {/* Description */}
-                    <p className="mt-1 text-[13px] text-neutral-500 max-w-md tracking-[-0.25px] leading-relaxed">
+                    <p className="mt-1 text-[12px] sm:text-[13px] text-neutral-500 max-w-md tracking-[-0.25px] leading-relaxed">
                         {projectDescription}
                     </p>
                 </div>

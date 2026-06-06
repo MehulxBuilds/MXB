@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { SmoothScroll, SmoothScrollHandle } from '../smooth-scroll';
 import { motion } from 'motion/react';
 import Navbar from './navbar';
 import Introduction from './introduction';
@@ -16,34 +15,34 @@ interface ContentViewProps {
 }
 
 const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSectionScroll }: ContentViewProps) => {
-    const scrollRef = useRef<SmoothScrollHandle>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
     const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
     useEffect(() => {
         if (scrollToSection && scrollRef.current) {
             const targetSection = sectionRefs.current[scrollToSection];
             if (targetSection) {
-                scrollRef.current.scrollTo(targetSection.offsetTop);
+                scrollRef.current.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });
                 onScrollComplete();
             }
         }
     }, [scrollToSection, onScrollComplete]);
 
     return (
-        <div className="flex-1 flex flex-col gap-4 h-full p-4 bg-[#E6E6E6] rounded-4xl border border-gray-200 overflow-hidden font-sans">
+        <div className="flex-1 flex flex-col gap-2 lg:gap-4 h-full p-2 lg:p-4 bg-[#E6E6E6] rounded-3xl lg:rounded-4xl border border-gray-200 overflow-hidden font-sans">
             {/* Header */}
             <Navbar onSectionScroll={onSectionScroll} />
 
             {/* Main Content Area */}
-            <main className="flex-1 bg-white rounded-4xl border border-gray-100 overflow-hidden">
-                <SmoothScroll ref={scrollRef}>
+            <main className="flex-1 bg-white rounded-3xl lg:rounded-4xl border border-gray-100 overflow-hidden">
+                <div ref={scrollRef} className="w-full h-full overflow-y-auto scroll-smooth hidden-scrollbar">
 
                     {/* Introduction */}
                     <motion.section
                         ref={(el: HTMLElement | null) => { sectionRefs.current["introduction"] = el }}
                         onViewportEnter={() => setActiveSection("introduction")}
                         viewport={{ amount: 0.6 }}
-                        className='min-h-auto w-full flex justify-center items-start px-4 py-12'>
+                        className='min-h-auto w-full flex justify-center items-start px-2 sm:px-4 py-6 sm:py-12'>
                         <Introduction />
                     </motion.section>
 
@@ -84,7 +83,7 @@ const ContentView = ({ setActiveSection, scrollToSection, onScrollComplete, onSe
                         <ContactFooter />
                     </motion.section>
 
-                </SmoothScroll>
+                </div>
             </main>
         </div>
     )
