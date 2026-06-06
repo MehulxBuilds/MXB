@@ -1,34 +1,34 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { homeDataItem } from './data';
-import { SmoothScroll, SmoothScrollHandle } from '../smooth-scroll';
 import { motion } from 'motion/react';
 import { MoveUpRight } from 'lucide-react';
 
 interface SidebarViewProps {
     activeSection: string;
     onSectionClick: (id: string) => void;
+    mobile?: boolean;
 }
 
-const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
-    const scrollRef = useRef<SmoothScrollHandle>(null);
+const SidebarView = ({ activeSection, onSectionClick, mobile }: SidebarViewProps) => {
+    const scrollRef = useRef<HTMLDivElement>(null);
     const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
     useEffect(() => {
         if (scrollRef.current && itemRefs.current[activeSection]) {
-            const container = scrollRef.current.container;
+            const container = scrollRef.current;
             const target = itemRefs.current[activeSection];
 
             if (container && target) {
                 const targetTop = target.offsetTop - (container.offsetHeight / 2) + (target.offsetHeight / 2);
-                scrollRef.current.scrollTo(targetTop);
+                container.scrollTo({ top: targetTop, behavior: 'smooth' });
             }
         }
     }, [activeSection]);
 
     return (
-        <aside className="relative w-[320px] flex flex-col bg-[#E6E6E6] rounded-4xl p-4 border border-gray-200 h-full overflow-hidden">
-            <SmoothScroll ref={scrollRef} className="flex-1">
+        <aside className={`relative flex flex-col bg-[#E6E6E6] p-4 border border-gray-200 overflow-hidden ${mobile ? 'w-full h-full rounded-r-4xl' : 'w-[320px] rounded-4xl h-full'}`}>
+            <div ref={scrollRef} className="flex-1 w-full h-full overflow-y-auto scroll-smooth hidden-scrollbar">
                 <div className="flex flex-col gap-4">
                     {
                         homeDataItem.map((item) => (
@@ -69,7 +69,7 @@ const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
                         ))
                     }
                 </div>
-            </SmoothScroll>
+            </div>
 
         </aside>
     )

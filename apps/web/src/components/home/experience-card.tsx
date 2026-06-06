@@ -31,10 +31,10 @@ const ExperienceCard = (
         currentWorking: boolean,
     }) => {
     return (
-        <div className="w-full max-w-2xl rounded-2xl bg-white p-5 text-neutral-900 font-sans">
+        <div className="w-full max-w-2xl rounded-2xl bg-white px-3 py-5 sm:px-5 text-neutral-900 font-sans">
 
             {/* Top Row */}
-            <div className="flex items-start justify-between">
+            <div className="flex flex-row items-center justify-between gap-2 sm:gap-0">
 
                 {/* Left */}
                 <div className="flex items-start gap-3 relative">
@@ -54,8 +54,8 @@ const ExperienceCard = (
 
                     {/* Title + Role */}
                     <div>
-                        <div className="flex items-center gap-2">
-                            <p className={`font-medium text-[15px] tracking-tight ${currentWorking ? "blur-sm select-none" : ""}`}>
+                        <div className="flex items-center gap-2 flex-wrap">
+                            <p className={`font-medium text-[12.5px] sm:text-[15px] tracking-tight ${currentWorking ? "blur-sm select-none" : ""}`}>
                                 {companyName}
                             </p>
                             <span className="text-[11px] px-2 py-[2px] rounded-md bg-neutral-100 text-neutral-600 border border-neutral-200">
@@ -63,13 +63,13 @@ const ExperienceCard = (
                             </span>
                             {currentWorking && (
                                 <span className="relative flex items-center justify-center size-2.5">
-                                    <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-pulse" />
+                                    <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
                                     <span className="relative inline-flex size-[6.5px] rounded-full bg-green-500" />
                                 </span>
                             )}
                         </div>
 
-                        <p className="text-[13px] text-neutral-500 mt-[2px]">
+                        <p className="text-[12px] sm:text-[13px] text-neutral-500 mt-[2px]">
                             {role}
                         </p>
                     </div>
@@ -77,10 +77,10 @@ const ExperienceCard = (
 
                 {/* Right */}
                 <div className="text-right tracking-[-0.3px]">
-                    <p className="text-[13px] text-neutral-700">
+                    <p className="text-[11px] sm:text-[13px] text-neutral-700">
                         {startDate} - {endDate}
                     </p>
-                    <p className="text-[12px] text-neutral-400">
+                    <p className="text-[11px] sm:text-[13px] text-neutral-400">
                         {country}, {workType}
                     </p>
                 </div>
@@ -93,7 +93,7 @@ const ExperienceCard = (
                 <div className="mt-1.5 size-2 rounded-full bg-neutral-400 shrink-0" />
 
                 {/* Text */}
-                <p className="text-[13px] text-neutral-600 leading-relaxed tracking-[-0.25px]">
+                <p className="text-[12px] sm:text-[13px] text-neutral-600 leading-relaxed tracking-[-0.25px]">
                     {points1}
                 </p>
             </div>
@@ -105,7 +105,7 @@ const ExperienceCard = (
                     <div className="mt-1.5 size-2 rounded-full bg-neutral-400 shrink-0" />
 
                     {/* Text */}
-                    <p className="text-[13px] text-neutral-600 leading-relaxed tracking-[-0.25px]">
+                    <p className="text-[12px] sm:text-[13px] text-neutral-600 leading-relaxed tracking-[-0.25px]">
                         {points2}
                     </p>
                 </div>
