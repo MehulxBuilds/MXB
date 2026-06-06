@@ -52,7 +52,8 @@ const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
                                     src={`/images/${item.imageUrl}`}
                                     alt={item.title}
                                     fill
-                                    className={`object-cover transition-all duration-700 group-hover:scale-110 ${activeSection === item.id ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'
+                                    sizes="320px"
+                                    className={`object-cover transition-[filter] duration-300 ${activeSection === item.id ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'
                                         }`}
                                 />
                                 <div className="absolute bottom-0 w-full h-30 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(0,0,0,0.53)_70%)]" />
@@ -62,11 +63,7 @@ const SidebarView = ({ activeSection, onSectionClick }: SidebarViewProps) => {
                                     <MoveUpRight className="size-4.25 opacity-0 translate-y-1 hidden group-hover:block  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
                                 </div>
                                 {activeSection === item.id && (
-                                    <motion.div
-                                        layoutId="active-indicator"
-                                        className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full shadow-lg"
-                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                    />
+                                    <div className="absolute top-6 left-6 w-2 h-2 bg-white rounded-full shadow-lg" />
                                 )}
                             </motion.div>
                         ))

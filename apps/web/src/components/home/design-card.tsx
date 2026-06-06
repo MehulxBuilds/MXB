@@ -37,7 +37,8 @@ const DesignCard = ({
                         src={image}
                         alt={text}
                         fill
-                        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                 </div>
 

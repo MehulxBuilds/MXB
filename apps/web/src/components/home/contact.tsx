@@ -108,7 +108,7 @@ export default function ContactFooter() {
             </div>
 
             {/* Bottom Text */}
-            <div className="text-[#5A5A5A] italic font-apparel leading-0 translate-y-[170px]">
+            <div className="text-[#5A5A5A] italic font-apparel leading-0 translate-y-[170px] will-change-transform">
                 <p className="text-[300px] tracking-tight font-medium drop-shadow-lg drop-shadow-neutral-500 text-stroke-light">
                     mehul
                 </p>

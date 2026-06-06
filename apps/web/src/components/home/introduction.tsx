@@ -21,12 +21,12 @@ const Introduction = () => {
                         width={80}
                         height={80}
                         className="w-26 h-26 rounded-full object-cover"
-                        unoptimized
+                        priority
                     />
 
                     <Button className='font-medium tracking-tight bg-white px-1 h-4 flex items-center justify-center gap-2.5 rounded-full hover:bg-neutral-50 hover:border-neutral-300 text-neutral-800 transition-all absolute bottom-1 right-1.5'>
                         <span className="relative flex items-center justify-center size-3">
-                            <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
+                            <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-pulse" />
                             <span className="relative inline-flex size-1.75 rounded-full bg-green-500" />
                         </span>
                     </Button>
@@ -109,7 +109,7 @@ const Introduction = () => {
             <div className='w-full text-[13.5px] px-4 py-2 flex items-center gap-2'>
                 <CalDotCom className='font-medium tracking-tight bg-[#3b3b3b] border-2 border-[#c3c3c3] px-2 h-8.5 flex items-center justify-center gap-5 rounded-full hover:bg-[#424242] drop-shadow-md drop-shadow-neutral-400'>
                     <span className="relative flex items-center justify-center size-2.5">
-                        <span className="absolute inline-flex size-full rounded-full bg-red-400 opacity-75 animate-ping" />
+                        <span className="absolute inline-flex size-full rounded-full bg-red-400 opacity-75 animate-pulse" />
                         <span className="relative inline-flex size-1.75 rounded-full bg-pink-500/90" />
                     </span>
                     <p className='text-[13px]'>Book an Introductry Call</p>

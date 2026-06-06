@@ -14,7 +14,6 @@ const SkillButton = ({
                 src={image}
                 height={18}
                 width={18}
-                unoptimized
                 className="shrink-0 group-hover:scale-110 transition-transform duration-200"
             />
             <p className="text-[12.5px] font-medium tracking-[-0.2px] text-neutral-600 group-hover:text-neutral-800 transition-colors duration-200">

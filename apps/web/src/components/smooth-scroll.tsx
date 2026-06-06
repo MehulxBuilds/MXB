@@ -27,13 +27,11 @@ export const SmoothScroll = forwardRef<SmoothScrollHandle, SmoothScrollProps>(({
 
   const [contentHeight, setContentHeight] = useState(0);
 
-  // Native scroll value
   const scrollY = useMotionValue(0);
 
-  // Smooth spring value tracking the native scroll
   const springY = useSpring(scrollY, {
-    damping: 30,
-    stiffness: 150,
+    damping: 50,
+    stiffness: 300,
     mass: 0.1,
   });
 
@@ -46,26 +44,23 @@ export const SmoothScroll = forwardRef<SmoothScrollHandle, SmoothScrollProps>(({
     container: containerRef.current
   }));
 
-  // Measure content height
   useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
     const update = () => {
-      if (contentRef.current) {
-        setContentHeight(contentRef.current.scrollHeight);
-      }
+      setContentHeight(content.scrollHeight);
     };
 
     update();
     const resizeObserver = new ResizeObserver(update);
-    if (contentRef.current) resizeObserver.observe(contentRef.current);
-    window.addEventListener("resize", update);
+    resizeObserver.observe(content);
 
     return () => {
       resizeObserver.disconnect();
-      window.removeEventListener("resize", update);
     };
-  }, [children]);
+  }, []);
 
-  // Sync scrollY with container's scroll top
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -74,7 +69,7 @@ export const SmoothScroll = forwardRef<SmoothScrollHandle, SmoothScrollProps>(({
       scrollY.set(container.scrollTop);
     };
 
-    container.addEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
   }, [scrollY]);
 
@@ -90,7 +85,7 @@ export const SmoothScroll = forwardRef<SmoothScrollHandle, SmoothScrollProps>(({
         <motion.div
           ref={contentRef}
           style={{ y }}
-          className="w-full pointer-events-auto will-change-transform"
+          className="w-full pointer-events-auto"
         >
           {children}
         </motion.div>

@@ -45,11 +45,10 @@ const ExperienceCard = (
                     <div className={`shrink-0 size-10 rounded-xl bg-neutral-100 flex items-center justify-center border border-neutral-200 ${currentWorking ? "blur-sm select-none" : ""}`}>
                         <Image
                             src={`/images/${companyImage}`}
-                            height={20}
-                            width={20}
+                            height={40}
+                            width={40}
                             alt={companyName}
                             className="h-10 w-10 rounded-xl object-cover"
-                            unoptimized
                         />
                     </div>
 
@@ -64,7 +63,7 @@ const ExperienceCard = (
                             </span>
                             {currentWorking && (
                                 <span className="relative flex items-center justify-center size-2.5">
-                                    <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
+                                    <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-pulse" />
                                     <span className="relative inline-flex size-[6.5px] rounded-full bg-green-500" />
                                 </span>
                             )}
