@@ -5,14 +5,13 @@ import CalDotCom from "../cal-dot-com";
 
 export default function ContactFooter() {
     return (
-        <section className="w-full max-w-[640px] mx-auto py-4 px-4 lg:px-0 text-center text-[#484848] relative">
+        <section className="w-full w-full mx-auto py-4 px-4 lg:px-0 text-center text-[#484848] relative">
 
             <div className="w-full rounded-xl flex items-center justify-center gap-4 bg-white py-8 sm:py-15">
                 <p className='font-apparel tracking-[0.3px] italic text-[#c8c8c8] text-[20px] sm:text-[26px]'>
                     Get In Touch.
                 </p>
             </div>
-
 
             <div className="text-[20px] sm:text-[28px] lg:text-[36px] text-[#5A5A5A] flex flex-col items-center leading-6 sm:leading-8 lg:leading-9">
                 {/* Heading */}
@@ -45,72 +44,75 @@ export default function ContactFooter() {
                 </CalDotCom>
             </div>
 
-            {/* Divider */}
-            <div className="mt-8 sm:mt-14 border-t border-neutral-300" />
-
             {/* Footer */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:justify-between text-left font-sans">
+            <div className="max-w-[680px] mx-auto">
 
-                {/* Left */}
-                <div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-10 h-10 font-candle italic rounded-[10px] bg-blue-400 flex items-center justify-center text-white text-[28px] font-semibold">
-                            m
+                {/* Divider */}
+                <div className="mt-8 sm:mt-14 border-t border-neutral-300 w-full" />
+
+                <div className="mt-8 flex flex-col sm:flex-row gap-8 sm:gap-0 sm:justify-between text-left font-sans w-full">
+
+                    {/* Left */}
+                    <div>
+                        <div className="flex items-center gap-2">
+                            <div className="w-10 h-10 font-candle italic rounded-[10px] bg-blue-400 flex items-center justify-center text-white text-[28px] font-semibold">
+                                m
+                            </div>
+                            <div className="leading-5">
+                                <p className="font-medium text-[13px] sm:text-[18px] text-[#484848]">MehulxBuilds</p>
+                                <p className="text-xs text-neutral-400 tracking-[-0.1px]">© 2026 All rights reserved.</p>
+                            </div>
                         </div>
-                        <div className="leading-5">
-                            <p className="font-medium text-[13px] sm:text-[18px] text-[#484848]">MehulxBuilds</p>
-                            <p className="text-xs text-neutral-400 tracking-[-0.1px]">© 2026 All rights reserved.</p>
+
+                        <p className="hidden sm:block mt-4 text-neutral-500 text-sm">
+                            From ideas to product <br />
+                            Making them standout
+                        </p>
+                    </div>
+
+                    {/* Columns */}
+                    <div className="flex gap-6 sm:gap-10">
+
+                        <div>
+                            <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Services</p>
+                            <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px]">
+                                <li>Design</li>
+                                <li>Development</li>
+                                <li>Automation</li>
+                            </ul>
                         </div>
-                    </div>
 
-                    <p className="hidden sm:block mt-4 text-neutral-500 text-sm">
-                        From ideas to product <br />
-                        Making them standout
-                    </p>
-                </div>
+                        <div>
+                            <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Socials</p>
+                            <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px] flex flex-col">
+                                <Link href="https://x.com/MehulxBuilds" target="_blank">
+                                    Twitter
+                                </Link>
+                                <Link href="https://www.linkedin.com/in/mehul-prajapati-816b28315/" target="_blank">
+                                    LinkedIn
+                                </Link>
+                                <Link href="https://www.instagram.com/mehulxbuilds/" target="_blank">
+                                    Instagram
+                                </Link>
+                            </ul>
+                        </div>
 
-                {/* Columns */}
-                <div className="flex gap-6 sm:gap-10">
-
-                    <div>
-                        <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Services</p>
-                        <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px]">
-                            <li>Design</li>
-                            <li>Development</li>
-                            <li>Automation</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Socials</p>
-                        <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px] flex flex-col">
-                            <Link href="https://x.com/MehulxBuilds" target="_blank">
-                                Twitter
-                            </Link>
-                            <Link href="https://www.linkedin.com/in/mehul-prajapati-816b28315/" target="_blank">
-                                LinkedIn
-                            </Link>
-                            <Link href="https://www.instagram.com/mehulxbuilds/" target="_blank">
-                                Instagram
-                            </Link>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Legal</p>
-                        <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px]">
-                            <li>Privacy Policy</li>
-                            <li>Terms of Service</li>
-                            <li>Contracts</li>
-                        </ul>
+                        <div>
+                            <p className="font-medium text-neutral-800 mb-2 text-[13px] sm:text-[15px]">Legal</p>
+                            <ul className="space-y-1 text-neutral-500 text-[12.5px] sm:text-[14px]">
+                                <li>Privacy Policy</li>
+                                <li>Terms of Service</li>
+                                <li>Contracts</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Text */}
-            <div className="hidden sm:block text-[#5A5A5A] italic font-apparel leading-0 translate-y-[100px] lg:translate-y-[170px] will-change-transform">
-                <p className="text-[120px] sm:text-[200px] lg:text-[300px] tracking-tight font-medium drop-shadow-lg drop-shadow-neutral-500 text-stroke-light">
-                    mehul
+            <div className="relative -mt-30 h-[460px] w-full font-candle text-neutral-500 hidden lg:block overflow-y-hidden">
+                <p className="text-[120px] sm:text-[200px] lg:text-[260px] font-medium drop-shadow-lg drop-shadow-neutral-500 absolute bottom-[-72px] md:bottom-[-160px] md:text-[360px] md:tracking-[-10px] w-full">
+                    Mehul
                 </p>
             </div>
         </section>

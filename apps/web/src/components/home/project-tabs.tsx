@@ -8,12 +8,13 @@ import {
 } from "@repo/ui";
 
 const ProjectTabs = () => {
-    const { setTab } = useProjectTabStore();
+    const { tab, setTab } = useProjectTabStore();
+
     return (
-        <Tabs defaultValue="overview">
+        <Tabs value={tab} onValueChange={(value) => setTab(value as typeof tab)}>
             <TabsList>
-                <TabsTrigger value="overview" onClick={() => setTab("dev")}>Saas</TabsTrigger>
-                <TabsTrigger value="analytics" onClick={() => setTab("design")}>Design</TabsTrigger>
+                <TabsTrigger value={"dev"}>Saas</TabsTrigger>
+                <TabsTrigger value={"design"}>Design</TabsTrigger>
             </TabsList>
         </Tabs>
     )

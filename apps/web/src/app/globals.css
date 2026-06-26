@@ -140,14 +140,14 @@ body::selection {
 
 @font-face {
   font-family: 'CandleSuit';
-  src: url('/fonts/CandleSuitDemoRegular.ttf') format('truetype');
+  src: url('/font/CandleSuitDemoRegular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'ApparelDisplay';
-  src: url('/fonts/ApparelDisplayItalic.otf') format('opentype');
+  src: url('/font/ApparelDisplayRegular.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -155,7 +155,7 @@ body::selection {
 
 @font-face {
   font-family: 'SatoshiMedium';
-  src: url('/fonts/SatoshiMedium.otf') format('opentype');
+  src: url('/font/SatoshiMedium.otf') format('opentype');
   font-weight: 400;
   font-display: swap;
 }
