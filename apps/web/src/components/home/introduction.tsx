@@ -20,7 +20,7 @@ const Introduction = () => {
                         alt="Mehul Prajapati"
                         width={80}
                         height={80}
-                        className="w-16 h-16 sm:w-26 sm:h-26 rounded-full object-cover"
+                        className="w-16 h-16 sm:w-26 sm:h-26 rounded-full object-cover border-3 border-red-800"
                         priority
                     />
 
@@ -116,7 +116,7 @@ const Introduction = () => {
                     <PhoneCall className='text-white size-3.5' />
                 </CalDotCom>
 
-                <Link href={'https://drive.google.com/file/d/1VOUbQmZnxSVYfVFHHQxdtROWwrVzR3L-/view?usp=sharing'} target='_blank' className='font-semibold tracking-tight bg-[#F9F9F9] border-2 border-[#7a7a7a] px-3 sm:px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#F1F1F1] text-[#525252] drop-shadow-md drop-shadow-neutral-400'>
+                <Link href={'https://drive.google.com/file/d/1AK_CJPkVXGzMrENwrjfkIJYxo7DgySaF/view?usp=sharing'} target='_blank' className='font-semibold tracking-tight bg-[#F9F9F9] border-2 border-[#7a7a7a] px-3 sm:px-2 h-8.5 flex items-center justify-center gap-2 rounded-full hover:bg-[#F1F1F1] text-[#525252] drop-shadow-md drop-shadow-neutral-400'>
                     <Download className='size-4' />
                     <p className='text-[13px] hidden sm:block'>Download CV</p>
                     <p className='text-[13px] block sm:hidden'>Resume</p>

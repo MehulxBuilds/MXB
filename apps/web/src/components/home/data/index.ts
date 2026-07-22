@@ -105,6 +105,8 @@ export const SKILLS: SkillsType[] = [
     { text: "TypeScript", image: "/skills/typescript.svg", skilltype: "LANGUAGE" },
     { text: "Python", image: "/skills/python.svg", skilltype: "LANGUAGE" },
     { text: "Rust", image: "/skills/rust.svg", skilltype: "LANGUAGE" },
+    { text: "Go", image: "/skills/go.png", skilltype: "LANGUAGE" },
+    { text: "Dart", image: "/skills/dart.png", skilltype: "LANGUAGE" },
 
     // FRAMEWORKS & LIBRARIES
     { text: "React", image: "/skills/react.png", skilltype: "FRAMEWORKS & LIBRARIES" },
