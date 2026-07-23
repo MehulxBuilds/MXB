@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { X } from "lucide-react";
 import { useState } from "react";
-
+import type { DesignType } from "@/lib/design";
 
 import {
     Dialog,
@@ -13,18 +13,9 @@ import {
     DialogClose,
 } from "@repo/ui";
 
-const DesignCard = ({
-    item: {
-        text,
-        image
-    }
-}: {
-    item: {
-        text: string;
-        image: string;
-    }
-}) => {
+const DesignCard = ({ item }: { item: DesignType }) => {
     const [open, setOpen] = useState(false);
+    const { title, description, provider, url } = item;
 
     return (
         <>
@@ -34,24 +25,32 @@ const DesignCard = ({
             >
                 <div className="relative w-full h-64 overflow-hidden">
                     <Image
-                        src={image}
-                        alt={text}
+                        src={url}
+                        alt={title}
                         fill
+                        loading="lazy"
+                        quality={75}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
                     />
                 </div>
 
                 <div className="px-5 py-4 flex items-center justify-between border-t border-neutral-100">
-                    <p className="text-[13px] font-medium text-neutral-600 tracking-tight">{text}</p>
-                    <span className="text-[11px] text-neutral-400 uppercase tracking-widest">Design</span>
+                    <div className="min-w-0">
+                        <p className="text-[13px] font-medium text-neutral-600 tracking-tight truncate">
+                            {title}
+                        </p>
+                    </div>
+                    <span className="ml-4 shrink-0 text-[11px] text-neutral-400 uppercase tracking-widest">
+                        {provider}
+                    </span>
                 </div>
             </div>
 
-            <ImagePreviewModal open={open} setOpen={setOpen} image={image} text={text} />
+            <ImagePreviewModal open={open} setOpen={setOpen} image={url} text={title} />
         </>
-    )
-}
+    );
+};
 
 type Props = {
     open: boolean;
@@ -64,8 +63,6 @@ export function ImagePreviewModal({ open, setOpen, image, text }: Props) {
     return (
         <Dialog open={open} onOpenChange={setOpen}>
             <DialogContent className="max-w-5xl max-h-[600px] p-0 overflow-y-auto hidden-scrollbar">
-
-                {/* Header */}
                 <DialogHeader className="sticky top-0 z-10 flex flex-row items-center justify-between px-5 py-3 bg-white border-b border-neutral-100">
                     <DialogTitle className="text-sm font-medium text-neutral-600 tracking-tight">
                         {text}
@@ -78,13 +75,14 @@ export function ImagePreviewModal({ open, setOpen, image, text }: Props) {
                     </DialogClose>
                 </DialogHeader>
 
-                {/* Image */}
                 <div>
                     <Image
                         src={image}
                         alt={text}
                         width={1200}
                         height={900}
+                        loading="lazy"
+                        quality={80}
                         className="w-full h-auto"
                     />
                 </div>

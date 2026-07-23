@@ -1,13 +1,19 @@
 "use client";
 
-import { useProjectTabStore } from "@/store/project";
-import { DESIGNSKILLS, PROJECTS } from "./data";
+import { useDesign, useProjectTabStore } from "@/store/project";
+import { PROJECTS } from "./data";
 import ProjectCard from "./project-card";
 import ProjectTabs from "./project-tabs";
 import DesignCard from "./design-card";
+import { useEffect } from "react";
 
 const Projects = () => {
+    const { designs, getDesign } = useDesign();
     const { tab } = useProjectTabStore();
+
+    useEffect(() => {
+        getDesign();
+    }, []);
 
     return (
         <div className='min-h-auto w-full max-w-160 flex flex-col justify-start items-center px-4 pb-2 pt-6'>
@@ -34,8 +40,8 @@ const Projects = () => {
 
             {tab === "design" && (
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                    {DESIGNSKILLS.map((item, idx) => (
-                        <DesignCard key={idx} item={item} />
+                    {designs.map((item) => (
+                        <DesignCard key={item.id} item={item} />
                     ))}
                 </div>
             )}

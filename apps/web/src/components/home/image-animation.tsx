@@ -24,7 +24,13 @@ const ImageAnimation = ({ data, classname }: { data: string[]; classname: string
                 transition={{ duration: 0.4, ease: "easeInOut" }}
                 className={classname}
             >
-                <Image src={`/social/${data[index]}`} alt={""} height={17} width={17} />
+                <Image
+                    src={`/social/${data[index]}`}
+                    alt=""
+                    height={17}
+                    width={17}
+                    loading="lazy"
+                />
             </motion.span>
         </AnimatePresence>
     )

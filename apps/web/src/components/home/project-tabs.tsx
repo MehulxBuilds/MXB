@@ -1,6 +1,7 @@
 "use client";
 
 import { useProjectTabStore } from "@/store/project";
+import { ProjectTabsType } from "@/types";
 import {
     Tabs,
     TabsList,

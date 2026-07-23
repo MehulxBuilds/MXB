@@ -52,6 +52,8 @@ const SidebarView = ({ activeSection, onSectionClick, mobile }: SidebarViewProps
                                     src={`/images/${item.imageUrl}`}
                                     alt={item.title}
                                     fill
+                                    loading="lazy"
+                                    quality={70}
                                     sizes="320px"
                                     className={`object-cover transition-[filter] duration-300 ${activeSection === item.id ? 'grayscale-0' : 'grayscale group-hover:grayscale-0'
                                         }`}

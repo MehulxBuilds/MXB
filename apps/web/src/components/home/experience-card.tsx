@@ -47,6 +47,7 @@ const ExperienceCard = (
                             src={`/images/${companyImage}`}
                             height={40}
                             width={40}
+                            loading="lazy"
                             alt={companyName}
                             className="h-10 w-10 rounded-xl object-cover"
                         />

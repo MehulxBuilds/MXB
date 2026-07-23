@@ -30,6 +30,8 @@ const ProjectCard = ({
                     alt={projectTitle}
                     width={240}
                     height={160}
+                    loading="lazy"
+                    quality={75}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                 />
 
