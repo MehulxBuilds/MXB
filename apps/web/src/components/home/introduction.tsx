@@ -8,6 +8,7 @@ import { Button, Hint } from "@repo/ui";
 import { EmailLogo, GithubLogo, InstagramLogo, LinkedInLogo, MediumLogo, PinterestLogo, TwitterLogo } from './data/svg-logo';
 import CalDotCom from '../cal-dot-com';
 import { Download, PhoneCall } from 'lucide-react';
+import AnalyticsView from './analytics';
 
 const Introduction = () => {
     return (
@@ -23,27 +24,20 @@ const Introduction = () => {
                         className="w-16 h-16 sm:w-26 sm:h-26 rounded-full object-cover border-3 border-red-800"
                         priority
                     />
-
-                    <Button className='font-medium tracking-tight bg-white px-1 h-4 flex items-center justify-center gap-2.5 rounded-full hover:bg-neutral-50 hover:border-neutral-300 text-neutral-800 transition-all absolute bottom-0 sm:bottom-1 right-0 sm:right-1.5'>
-                        <span className="relative flex items-center justify-center size-3">
-                            <span className="absolute inline-flex size-full rounded-full bg-green-400 opacity-75 animate-ping" />
-                            <span className="relative inline-flex size-1.75 rounded-full bg-green-500" />
-                        </span>
-                    </Button>
+                    <AnalyticsView />
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-col">
-                    <h1 className="text-[18px] sm:text-[25px] font-semibold tracking-[-0.5px] text-gray-900 flex items-center gap-2">
-                        <span>Mehul Prajapati.</span>
-                    </h1>
+                    <div className="text-[18px] sm:text-[25px] font-semibold tracking-[-0.5px] text-gray-900 flex items-center gap-2">
+                        <h1>Mehul Prajapati.</h1>
+                    </div>
 
                     <p className="text-[12px] sm:text-[15px] text-gray-400 tracking-[-0.1px]">
                         Developer · Designer · <span>
                             <Link className='hover:underline' href={'https://x.com/MehulxBuilds'} target='_blank'>@mehulxbuilds</Link>
                         </span>
                     </p>
-
                 </div>
             </div>
 
